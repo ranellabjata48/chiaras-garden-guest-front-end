@@ -294,7 +294,7 @@ function Accommodation() {
             api.serviceData
           ).map((data) => (
             <Col
-              key={data.cot_no}
+              key={data.cot_id}
               xs={6}
               sm={6}
               md={4}
@@ -355,7 +355,7 @@ function Accommodation() {
             api.serviceData
           ).map((data) => (
             <Col
-              key={data.svcs_no}
+              key={data.svcs_id}
               xs={6}
               sm={6}
               md={4}

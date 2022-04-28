@@ -497,3 +497,39 @@ code {
   font-weight: 700;
 }
 /* ADD FORM RESERVATION END */
+
+/* RESERVATION BEGIN */
+@media (orientation: landscape) {
+  .reservation-container {
+    padding-top: 2rem;
+  }
+
+  .reservation-body {
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .reservation-card-img {
+    display: inline-block;
+    width: 12vw;
+    height: 10vw;
+    object-fit: cover;
+  }
+
+  .reservation-card-body {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .inline {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 14pt;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+}
+/* RESERVATION END */
