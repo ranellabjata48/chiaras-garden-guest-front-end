@@ -21,15 +21,18 @@ code {
 }
 
 .Nav-titles {
+  background-color: white;
+  width: 100vw;
   text-align: right;
   position: absolute;
   right: 0;
-  margin-right: 2em;
+  padding-right: 2em;
 }
 
 .Navbar-full-control {
   background-color: white;
 }
+
 /* NAVBAR END */
 
 /* HOME BEGIN */
@@ -126,6 +129,7 @@ code {
 
 @media (orientation: landscape) {
   .account-body {
+    border: 1px solid #F2F2F2;
     background-color: white;
     margin-top: 1rem;
     margin-bottom: 1em;
@@ -133,6 +137,7 @@ code {
   }
   
   .account-body-logout {
+    border: 1px solid #F2F2F2;
     background-color: white;
     margin-bottom: 3em;
     width: 60vw;
@@ -160,6 +165,7 @@ code {
 
 @media (orientation: portrait) {
   .account-body {
+    border: 1px solid #F2F2F2;
     background-color: white;
     margin-top: 0.5rem;
     margin-bottom: 1em;
@@ -167,6 +173,7 @@ code {
   }
 
   .account-body-logout {
+    border: 1px solid #F2F2F2;
     background-color: white;
     margin-bottom: 3em;
     width: 90vw;
@@ -205,6 +212,7 @@ code {
 /* ABOUT BEGIN */
 @media (orientation: landscape ) {
   .about-container {
+    border: 1px solid #F2F2F2;
     margin-top: 0.5em;
     margin-left: 0.5em;
     margin-right: 0.5em;
@@ -242,6 +250,7 @@ code {
 
 @media (orientation: portrait ) {
   .about-container {
+    border: 1px solid #F2F2F2;
     margin-top: 0.5em;
     margin-left: 0.5em;
     margin-right: 0.5em;
@@ -345,6 +354,12 @@ code {
 
   .cart-btn {
     width: 100%;
+  }
+
+  .cart-descrip-format {
+    white-space: pre-line;
+    white-space: pre-wrap;
+    text-align: justify;
   }
 }
 
@@ -532,4 +547,79 @@ code {
     cursor: pointer;
   }
 }
+
+@media (orientation: portrait) {
+  .reservation-container {
+    padding-top: 2rem;
+  }
+
+  .reservation-body {
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .reservation-card-img {
+    display: inline-block;
+    width: 17vw;
+    height: 15vw;
+    object-fit: cover;
+  }
+
+  .reservation-card-body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .inline {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 10pt;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+}
 /* RESERVATION END */
+
+/* CONTACT BEGIN */
+ @media (orientation: landscape) {
+  .contact-container{
+    border: 1px solid #F2F2F2;
+    background-color: white;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1em;
+    width: 60vw;
+   }
+  
+   .contact-header {
+    font-size: 2em;
+    font-weight: 500;
+   }
+
+ }
+
+ @media (orientation: portrait) {
+  .contact-container{
+    border: 1px solid #F2F2F2;
+    background-color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1em;
+    width: 95vw;
+   }
+  
+   .contact-header {
+    font-size: 1em;
+    font-weight: 500;
+   }
+
+ }
+
+/* CONTACT END */

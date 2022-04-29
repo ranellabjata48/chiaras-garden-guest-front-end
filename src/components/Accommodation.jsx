@@ -428,7 +428,7 @@ function Accommodation() {
             <span className="cart-text-grey cart-rate modal-rate">{`Rate: ₱${api.selectedItem.room_rate}`}</span>
             <br />
             <br />
-            <span className="cart-text-grey modal-description">
+            <span className="cart-text-grey modal-description cart-descrip-format">
               {api.selectedItem.room_descr}
             </span>
           </Modal.Body>
@@ -459,7 +459,7 @@ function Accommodation() {
             <span className="cart-text-grey cart-rate modal-rate">{`Rate: ₱${api.selectedItem.cot_rate}`}</span>
             <br />
             <br />
-            <span className="cart-text-grey modal-description">
+            <span className="cart-text-grey modal-description cart-descrip-format">
               {api.selectedItem.cot_descr}
             </span>
           </Modal.Body>
@@ -494,7 +494,7 @@ function Accommodation() {
             <span className="cart-text-grey cart-rate modal-rate">{`Rate: ₱${api.selectedItem.svcs_rate}`}</span>
             <br />
             <br />
-            <span className="cart-text-grey modal-description">
+            <span className="cart-text-grey modal-description cart-descrip-format">
               {api.selectedItem.svcs_descr}
             </span>
           </Modal.Body>

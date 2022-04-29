@@ -13,31 +13,55 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="Nav-titles">
-            <NavLink className="nav-link" to="/">
+            <NavLink className="nav-link" style={displayActiveRoute()} to="/">
               Home
             </NavLink>
 
-            <NavLink className="nav-link" to="/about">
+            <NavLink
+              className="nav-link"
+              style={displayActiveRoute()}
+              to="/about"
+            >
               About
             </NavLink>
 
-            <NavLink className="nav-link" to="/gallery">
+            <NavLink
+              className="nav-link"
+              style={displayActiveRoute()}
+              to="/gallery"
+            >
               Gallery{" "}
             </NavLink>
 
-            <NavLink className="nav-link" to="/accommodation">
+            <NavLink
+              className="nav-link"
+              style={displayActiveRoute()}
+              to="/accommodation"
+            >
               Accommodation
             </NavLink>
 
-            <NavLink className="nav-link" to="/reservation">
+            <NavLink
+              className="nav-link"
+              style={displayActiveRoute()}
+              to="/reservation"
+            >
               Reservation
             </NavLink>
 
-            <NavLink className="nav-link" to="/contact">
+            <NavLink
+              className="nav-link"
+              style={displayActiveRoute()}
+              to="/contact"
+            >
               Contact
             </NavLink>
 
-            <NavLink className="nav-link" to="/account">
+            <NavLink
+              className="nav-link"
+              style={displayActiveRoute()}
+              to="/account"
+            >
               Account
             </NavLink>
           </Nav>
@@ -45,6 +69,12 @@ function NavBar() {
       </Container>
     </Navbar>
   );
+}
+
+function displayActiveRoute() {
+  return ({ isActive }) => ({
+    color: isActive ? "#A205F0" : "",
+  });
 }
 
 export default NavBar;
