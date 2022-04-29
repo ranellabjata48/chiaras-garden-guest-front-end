@@ -22,7 +22,6 @@ code {
 
 .Nav-titles {
   background-color: white;
-  width: 100vw;
   text-align: right;
   position: absolute;
   right: 0;
@@ -31,6 +30,17 @@ code {
 
 .Navbar-full-control {
   background-color: white;
+}
+
+@media (orientation: portrait) {
+  .Nav-titles {
+    background-color: white;
+    width: 100vw;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    padding-right: 2em;
+  }
 }
 
 /* NAVBAR END */
