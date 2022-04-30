@@ -46,7 +46,7 @@ function Home() {
                 Welcome to Chiara's Garden Hotel & Resort
               </div>
               <div className="home-carousel-body">
-                Check our accommodations today!
+                Checkout our accommodations today!
               </div>
             </Carousel.Caption>
           </Carousel.Item>

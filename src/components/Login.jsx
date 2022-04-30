@@ -32,6 +32,12 @@ const formReducer = (state, action) => {
         password: "",
         confirmPassword: "",
       };
+    case "clearLoginForm":
+      return {
+        ...state,
+        email: "",
+        password: "",
+      };
     default: {
       return formInitialState;
     }
@@ -189,7 +195,11 @@ function Login() {
                     >
                       <Button
                         variant="success"
-                        onClick={handleShow}
+                        onClick={() => {
+                          setForm({ type: "clearLoginForm" });
+                          setError({});
+                          handleShow();
+                        }}
                         className="w-70"
                       >
                         Create new account

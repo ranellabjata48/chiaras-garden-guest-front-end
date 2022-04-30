@@ -24,8 +24,6 @@ function Contact() {
     };
   }, []);
 
-  console.log("render outside");
-
   return (
     <Container className="contact-container">
       <div className="contact-header">Follow and Contact Us</div>

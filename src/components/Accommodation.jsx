@@ -195,8 +195,6 @@ function Accommodation() {
     }
   };
 
-  console.log("render outside");
-
   return (
     <Container className="accommodation-container">
       <Row>
@@ -265,7 +263,9 @@ function Accommodation() {
                     <br />
                     <br />
                     <span className="cart-description">
-                      {data.room_descr.substring(0, 35) + " . . ."}
+                      {data.room_descr.length > 40
+                        ? data.room_descr.substring(0, 40) + " . . ."
+                        : data.room_descr}
                     </span>
                   </Card.Text>
                   <Button
@@ -326,7 +326,9 @@ function Accommodation() {
                     <br />
                     <br />
                     <span className="cart-description">
-                      {data.cot_descr.substring(0, 35) + " . . ."}
+                      {data.cot_descr.length > 40
+                        ? data.cot_descr.substring(0, 40) + " . . ."
+                        : data.cot_descr}
                     </span>
                   </Card.Text>
                   <Button
@@ -389,7 +391,9 @@ function Accommodation() {
                     <br />
                     <br />
                     <span className="cart-description">
-                      {data.svcs_descr.substring(0, 35) + " . . ."}
+                      {data.svcs_descr.length > 40
+                        ? data.svcs_descr.substring(0, 40) + " . . ."
+                        : data.svcs_descr}
                     </span>
                   </Card.Text>
                   <Button

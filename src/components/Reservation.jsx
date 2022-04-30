@@ -281,8 +281,6 @@ function Reservation() {
     }
   };
 
-  console.log("render outside");
-
   return (
     <Container className="reservation-container">
       <Row className="reservation-list">

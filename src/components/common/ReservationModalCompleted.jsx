@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button, Modal, Form } from "react-bootstrap";
 import moment from "moment";
+import "moment-precise-range-plugin";
 
 function ReservationModalCompleted(props) {
   const { show, handleClose, accommodation, accommodationType, guestInfo } =
@@ -432,6 +433,21 @@ function ReservationModalCompleted(props) {
               </Col>
 
               <Col className="mb-3" md={6}>
+                <Form.Group controlId="daysOfStay">
+                  <Form.Label>Period of Stay</Form.Label>
+                  <Form.Control
+                    type="text"
+                    readOnly
+                    name="daysOfStay"
+                    value={totalDayOfStay(
+                      accommodation.line_checkin,
+                      accommodation.line_checkout
+                    )}
+                  />
+                </Form.Group>
+              </Col>
+
+              <Col className="mb-3" md={6}>
                 <Form.Group controlId="arrivalDate">
                   <Form.Label>Arrival Date</Form.Label>
                   <Form.Control
@@ -439,6 +455,23 @@ function ReservationModalCompleted(props) {
                     readOnly
                     name="arrivalDate"
                     value={moment(accommodation.line_checkin).format(
+                      "MMM DD, YYYY - dddd"
+                    )}
+                  />
+                  <Form.Text className="text-muted">
+                    <span className="text-danger">{}</span>
+                  </Form.Text>
+                </Form.Group>
+              </Col>
+
+              <Col className="mb-3" md={6}>
+                <Form.Group controlId="departureDate">
+                  <Form.Label>Departure Date</Form.Label>
+                  <Form.Control
+                    type="text"
+                    readOnly
+                    name="departureDate"
+                    value={moment(accommodation.line_checkout).format(
                       "MMM DD, YYYY - dddd"
                     )}
                   />
@@ -476,6 +509,21 @@ function ReservationModalCompleted(props) {
               </Col>
 
               <Col className="mb-3" md={6}>
+                <Form.Group controlId="daysOfStay">
+                  <Form.Label>Period of Stay</Form.Label>
+                  <Form.Control
+                    type="text"
+                    readOnly
+                    name="daysOfStay"
+                    value={totalDayOfStay(
+                      accommodation.line_checkin,
+                      accommodation.line_checkout
+                    )}
+                  />
+                </Form.Group>
+              </Col>
+
+              <Col className="mb-3" md={6}>
                 <Form.Group controlId="arrivalDate">
                   <Form.Label>Arrival Date</Form.Label>
                   <Form.Control
@@ -483,6 +531,23 @@ function ReservationModalCompleted(props) {
                     readOnly
                     name="arrivalDate"
                     value={moment(accommodation.line_checkin).format(
+                      "MMM DD, YYYY - dddd"
+                    )}
+                  />
+                  <Form.Text className="text-muted">
+                    <span className="text-danger">{}</span>
+                  </Form.Text>
+                </Form.Group>
+              </Col>
+
+              <Col className="mb-3" md={6}>
+                <Form.Group controlId="departureDate">
+                  <Form.Label>Departure Date</Form.Label>
+                  <Form.Control
+                    type="text"
+                    readOnly
+                    name="departureDate"
+                    value={moment(accommodation.line_checkout).format(
                       "MMM DD, YYYY - dddd"
                     )}
                   />
@@ -617,12 +682,13 @@ function ReservationModalCompleted(props) {
 }
 
 const totalDayOfStay = (arrival, departure) => {
-  const diff = moment(departure).diff(moment(arrival), "days");
-  if (diff > 0) {
-    return `${diff} day`;
-  } else {
-    return 0;
-  }
+  const checkIn = moment(arrival).format("YYYY-MM-DD HH:mm:ss");
+  const checkOut = moment(departure).format("YYYY-MM-DD HH:mm:ss");
+
+  const daysHoursOfStay = moment.preciseDiff(checkIn, checkOut, true);
+  return `${daysHoursOfStay.days !== 0 ? daysHoursOfStay.days + "d" : ""} ${
+    daysHoursOfStay.hours !== 0 ? daysHoursOfStay.hours + "h" : ""
+  } ${daysHoursOfStay.minutes !== 0 ? daysHoursOfStay.minutes + "m" : ""}`;
 };
 
 function balance(data, type, accom) {
