@@ -332,7 +332,7 @@ function Account() {
           </Col>
         </Row>
       </Container>
-      <Container className="account-body-logout">
+      <Container className="account-body-logout hover-object">
         <div className="account-logout" onClick={() => handleLogout()}>
           Logout
         </div>

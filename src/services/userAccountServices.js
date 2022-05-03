@@ -1,7 +1,6 @@
 import http from "./httpService";
-import api from "../config.json";
 
-const apiEndpoint = api.apiUrl + "/guest";
+const apiEndpoint = "/guest";
 
 export function getGuest(id) {
   return http.get(`${apiEndpoint}/${id}`);

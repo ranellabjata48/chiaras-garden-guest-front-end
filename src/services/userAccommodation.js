@@ -1,13 +1,12 @@
 import http from "./httpService";
-import api from "../config.json";
 
-const apiEndpointRoom = api.apiUrl + "/services/room";
-const apiEndpointCottage = api.apiUrl + "/services/cottage";
-const apiEndpointService = api.apiUrl + "/services/service";
+const apiEndpointRoom = "/services/room";
+const apiEndpointCottage = "/services/cottage";
+const apiEndpointService = "/services/service";
 
-const apiEndpointRoomTransaction = api.apiUrl + "/transaction/room";
-const apiEndpointCottageTransaction = api.apiUrl + "/transaction/cottage";
-const apiEndpointServiceTransaction = api.apiUrl + "/transaction/service";
+const apiEndpointRoomTransaction = "/transaction/room";
+const apiEndpointCottageTransaction = "/transaction/cottage";
+const apiEndpointServiceTransaction = "/transaction/service";
 
 export function getRooms() {
   return http.get(`${apiEndpointRoom}/vacant`);

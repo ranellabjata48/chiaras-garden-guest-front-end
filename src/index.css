@@ -633,3 +633,9 @@ code {
  }
 
 /* CONTACT END */
+
+/* GENERAL CSS BEGIN */
+.hover-object:hover {
+  cursor: pointer;
+}
+/* GENERAL CSS END */

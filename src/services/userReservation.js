@@ -1,9 +1,8 @@
 import http from "./httpService";
-import api from "../config.json";
 
-const apiEndpointRoom = api.apiUrl + "/transaction/room";
-const apiEndpointCottage = api.apiUrl + "/transaction/cottage";
-const apiEndpointService = api.apiUrl + "/transaction/service";
+const apiEndpointRoom = "/transaction/room";
+const apiEndpointCottage = "/transaction/cottage";
+const apiEndpointService = "/transaction/service";
 
 export function getPendingRoom(id) {
   return http.get(`${apiEndpointRoom}/pending/${id}`);

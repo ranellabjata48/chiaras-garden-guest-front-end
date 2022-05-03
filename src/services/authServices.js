@@ -1,8 +1,7 @@
 import http from "./httpService";
-import api from "../config.json";
 
-const apiEndpoint = api.apiUrl + "/auth";
-const guestApiEndpoint = api.apiUrl + "/guest";
+const apiEndpoint = "/auth";
+const guestApiEndpoint = "/guest";
 
 export function postGuestAuth(data) {
   return http.post(`${apiEndpoint}/guest/login`, data);
